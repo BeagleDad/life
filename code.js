@@ -52,7 +52,7 @@ function createTable() {
     var gridContainer = document.getElementById("gridContainer");
     if(!gridContainer) {
         // throw error if not found
-        console.error("Problem: no div for the grid table!");
+        //console.error("Problem: no div for the grid table!");
     }
     var table = document.createElement("table");
 
@@ -115,12 +115,12 @@ function setupControlButtons()
 // clear button click handler
 function startButtonHandler() {
     if(playing) {
-        console.log("Pause the game");
+        //console.log("Pause the game");
         playing = false;
         this.innerHTML = "continue";
         clearTimeout(timer);
     } else {
-        console.log("Continue the game");
+        //console.log("Continue the game");
         playing = true;
         this.innerHTML = "pause";
         play();
@@ -129,7 +129,7 @@ function startButtonHandler() {
 }
 
 function clearButtonHandler() {
-    console.log("Clear the game: stop playing and clear the grid");
+    //console.log("Clear the game: stop playing and clear the grid");
     playing = false;
     var startButton = document.getElementById("start");
     startButton.innerHTML = "start";
@@ -166,7 +166,7 @@ function randomButtonHandler() {
 }
 
 function play() {
-    console.log("Play the game");
+    //console.log("Play the game");
     computeNextGen();
 
     if(playing) {
